@@ -1,0 +1,7 @@
+{
+  "name": "cookhome",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
