@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductAddService } from 'src/app/service/product-add.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,16 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {
+
+  Contenido: any;
+  constructor(
+    private productos: ProductAddService,
+  ) {
+    this.productos.getProducts().subscribe((response)=>{
+      console.log("DATA", response);
+      
+      this.Contenido = response['results'];
+    }).unsubscribe;
 
   }
 

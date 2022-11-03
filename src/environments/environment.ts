@@ -4,7 +4,7 @@
 
 export const environment = {
   production: true,
-  API: 'https://parseapi.back4app.com/classes/',
+  API: 'https://parseapi.back4app.com/',
   APP_ID: "kZScAsfwvhqQaOxKm7awKbiQtlJyc7S1ohV1smoC",
   API_SECRET: "tc0yrHTVPLHkPgnMEYrrFlOZqbUoC5Xi5NdjELon",
 };
