@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: true,
+  API: 'https://parseapi.back4app.com/classes/',
+  APP_ID: "kZScAsfwvhqQaOxKm7awKbiQtlJyc7S1ohV1smoC",
+  API_SECRET: "tc0yrHTVPLHkPgnMEYrrFlOZqbUoC5Xi5NdjELon",
 };
 
 /*
