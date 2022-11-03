@@ -13,7 +13,7 @@ export interface Registro {
   email?: string;
   phone?: string;
   token?: string;
-  card?: number;
+  telefono?: number;
 }
 
 
