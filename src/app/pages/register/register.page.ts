@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AlertController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 import { SignUpService } from 'src/app/service/sign-up.service';
 
 @Component({
@@ -16,7 +16,8 @@ export class RegisterPage implements OnInit {
 
   constructor(
     private registerService: SignUpService,
-    private alertCtrl: AlertController
+    private alertCtrl: AlertController,
+    private NavigatorCtrl: NavController
   ) { }
   registroForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(10)]),
@@ -47,11 +48,31 @@ export class RegisterPage implements OnInit {
       }
       this.registerService.signUp(this.user).subscribe((response) => {
         this.session = response;
+        console.log("YA REGISTRE");
+        this.registerAlert();
       })
     }
   }
 
+  async registerAlert() {
+    const alert = await this.alertCtrl.create({
+      header: '¡Registro Exitoso!',
+      subHeader: 'Su registro se ha realizado correctamente',
+      message: 'Porfavor inicia sesión para completar tu registro',
+      buttons: [
+        {
+          text: 'OK',
+          handler: () => {
+            this.NavigatorCtrl.navigateRoot('/login');
+          },
+        },
+      ],
+    });
 
+    await alert.present();
+  }
+
+  // 
   async validAlert(tittle, message) {
     const alert = await this.alertCtrl.create({
       cssClass: 'my-custom-class',

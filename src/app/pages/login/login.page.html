@@ -1,8 +1,11 @@
-<ion-content>
-  <ion-card class="ion-text-center" style="margin: 10px; margin-top:40%">
+<ion-content class="background">
+  <ion-card class="ion-text-center" style="margin: 200px 25px 25px;">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <ion-card-header class="ion-text-center">
-        <ion-card-title>Iniciar Sesión</ion-card-title>
+        <!-- <ion-card-title>Iniciar Sesión</ion-card-title> -->
+        <div style="display: flex; align-items: center;justify-content: center;">
+          <ion-img class="logo" src="/assets/img/cookhome.png" alt=""></ion-img>
+        </div>
       </ion-card-header>
       <ion-card-content>
 

@@ -27,10 +27,10 @@ export class LoginPage implements OnInit {
   onSubmit(){
     if(this.loginForm.value.email === undefined || this.loginForm.value.email === null){
       this.validateAlert('Error Datos', 'Ingrese un correo');
-    }else if (this.loginForm.value.password === undefined || this.loginForm.value.password === null){
+    } else if (this.loginForm.value.password === undefined || this.loginForm.value.password === null){
       this.validateAlert('Error Datos', 'Inglese una contraseña');
-    } else{
-
+    } else {
+            
     }
   }
 
